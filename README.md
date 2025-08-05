@@ -11,8 +11,8 @@ A soon to be first website.
 
 ## Dependencies
 
-- Python 3.12.2
-- Flask module
+- [Python 3]([text](https://www.python.org/downloads/))
+  - Flask module
 
 To install Flask, run:
 ```sh
