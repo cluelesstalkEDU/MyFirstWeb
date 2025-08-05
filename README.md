@@ -4,8 +4,20 @@ A soon to be first website.
 
 ## Table of Contents
 
+- [Dependencies](#dependencies)
 - [Usage](#usage)
 - [Features](#features)
+- [Contributions](#contributions)
+
+## Dependencies
+
+- Python 3.12.2
+- Flask module
+
+To install Flask, run:
+```sh
+pip install flask
+```
 
 ## Usage
 
