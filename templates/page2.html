@@ -41,24 +41,15 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>My First Web Site</h1>
-        <p>Look mum! I did it!</p>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="bio"><b>Bio</b></a></li>
-        </ul>
-    </nav>
-    <main>
-        <p>Built by {{ this_guy }}</p>
-    </main>
-    <footer>
-        <p>
-            &copy; 2025 My First Web
-            <img src="static/shrek_pfp.png" alt="Custom Emoji" style="width: 1.5em; vertical-align: middle; margin-right: 0.3em;">
-        </p>
-    </footer>
+    {% extends "layout.html" %}
+
+    {% block content %}
+        <header>
+            <h1>My First Web Site</h1>
+        </header>
+        <main>
+            <p>Built by {{ this_guy }}</p>
+        </main>
+    {% endblock %}
 </body>
 </html>

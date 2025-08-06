@@ -45,30 +45,34 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>About Me</h1>
-        <p>Welcome to my biography page!</p>
-    </header>
-    <div class="bio-content">
-        <h2>Who am I?</h2>
-        <p>
-            Hi! <small>I'm</small> <strong>Rafin</strong>, <small>an</small> aspiring <small>web</small> developer <small>passionate</small> about <small>building</small> cool <small>things</small> on <small>the</small> internet.
-            I <small>love</small> learning <small>new</small> technologies <small>and</small> sharing <small>my</small> journey <small>with</small> others.
-        </p>
-        <h2>Interests</h2>
-        <ul>
-            <li>Coding and web development</li>
-            <li>Music and guitar</li>
-            <li>Reading science fiction</li>
-            <li>Exploring new <del>places</del> <ins>places</ins></li>
-        </ul>
-        <h2>Contact</h2>
-        <address>
-          Written by Rafin Hasan.<br>
-          Email: <a href="mailto:rafin.hasan@education.nsw.gov.au">rafin.hasan@education.nsw.gov.au</a><br>
-          GitHub: <a href="https://github.com/cluelesstalkEDU">cluelesstalkEDU</a><br>
-          Wollongong, NSW, Australia
-        </address>
-    </div>
+    {% extends "layout.html" %}
+
+    {% block content %}
+        <header>
+            <h1>About Me</h1>
+            <p>Welcome to my biography page!</p>
+        </header>
+        <div class="bio-content">
+            <h2>Who am I?</h2>
+            <p>
+                Hi! <small>I'm</small> <strong>Rafin</strong>, <small>an</small> aspiring <small>web</small> developer <small>passionate</small> about <small>building</small> cool <small>things</small> on <small>the</small> internet.
+                I <small>love</small> learning <small>new</small> technologies <small>and</small> sharing <small>my</small> journey <small>with</small> others.
+            </p>
+            <h2>Interests</h2>
+            <ul>
+                <li>Coding and web development</li>
+                <li>Music and guitar</li>
+                <li>Reading science fiction</li>
+                <li>Exploring new <del>places</del> <ins>places</ins></li>
+            </ul>
+            <h2>Contact</h2>
+            <address>
+            Written by Rafin Hasan.<br>
+            Email: <a href="mailto:rafin.hasan@education.nsw.gov.au">rafin.hasan@education.nsw.gov.au</a><br>
+            GitHub: <a href="https://github.com/cluelesstalkEDU">cluelesstalkEDU</a><br>
+            Wollongong, NSW, Australia
+            </address>
+        </div>
+    {% endblock %}
 </body>
 </html>
