@@ -24,9 +24,11 @@ pip install flask
 
 If it runs it's good enough
 
-## Features
+## Pages
 
-- None so far 😊
+- Home
+- Biography
+- Other Stuff
 
 ## Contributions
 - Mr Marsh my goat 🐐
