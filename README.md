@@ -11,6 +11,7 @@ A soon to be first website.
 
 ## Dependencies
 
+- HTML 5
 - [Python 3]([text](https://www.python.org/downloads/))
   - Flask module
 
