@@ -7,9 +7,13 @@ def home():
     return render_template('index.html')
 
 @app.route("/p2")
-def another_page():
+def page2():
     my_name = "Rafin"
     return render_template('page2.html', this_guy=my_name)
+
+@app.route("/bio")
+def bio():
+    return render_template('bio.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
