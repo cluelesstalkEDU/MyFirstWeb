@@ -16,6 +16,7 @@
             color: white;
             padding: 10px 0;
             text-align: center;
+            border-radius: 10px;
         }
         nav {
             margin: 20px 0;
@@ -46,10 +47,14 @@
 
     {% block content %}
         <header>
-            <h1>My First Web Site</h1>
+            <h1>My Second Page</h1>
         </header>
         <main>
-            <p>Built by {{ this_guy }}</p>
+            <h1>Current Date and Time</h1>
+            <p>
+                {{ current_time }}<br><br>
+                <small>Built by</small> <strong>{{ this_guy }}</strong>
+            </p>
         </main>
     {% endblock %}
 </body>
