@@ -13,11 +13,17 @@ A soon to be first website.
 
 - HTML 5
 - [Python 3]([text](https://www.python.org/downloads/))
-  - Flask module
+  - flask module
+  - pytz module
 
-To install Flask, run:
+To install flask, run:
 ```sh
 pip install flask
+```
+
+To install pytz, run:
+```sh
+pip install pytz
 ```
 
 ## Usage
