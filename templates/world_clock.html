@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Clock</title>
+</head>
+<body>
+    {% extends 'layout.html' %}
+
+{% block content %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+    }
+    h1 {
+        color: #333;
+        text-align: center;
+    }
+    form {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 500px;
+        margin: 0 auto 30px auto;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        text-align: center;
+    }
+    label {
+        font-weight: bold;
+        color: #333;
+    }
+    select {
+        margin: 0 10px 10px 0;
+        padding: 6px 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 1em;
+    }
+    button[type="submit"] {
+        background-color: #333;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1em;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    button[type="submit"]:hover {
+        background-color: #444;
+    }
+    .clock-box {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        padding: 15px 25px;
+        margin: 20px auto;
+        max-width: 350px;
+        text-align: center;
+    }
+    .clock-box h2 {
+        margin: 0 0 10px 0;
+        color: #333;
+    }
+    .clock-box p {
+        font-size: 1.2em;
+        color: #555;
+        margin: 0;
+    }
+    a {
+        color: #333;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<h1>World Clock</h1>
+
+<form method="POST">
+    <label>Select cities:</label><br><br>
+
+    <select name="city1">
+        {% for city in cities %}
+            <option value="{{ city }}" {% if city == selected[0] %}selected{% endif %}>{{ city }}</option>
+        {% endfor %}
+    </select>
+
+    <select name="city2">
+        {% for city in cities %}
+            <option value="{{ city }}" {% if city == selected[1] %}selected{% endif %}>{{ city }}</option>
+        {% endfor %}
+    </select>
+
+    <select name="city3">
+        {% for city in cities %}
+            <option value="{{ city }}" {% if city == selected[2] %}selected{% endif %}>{{ city }}</option>
+        {% endfor %}
+    </select>
+
+    <br><br>
+    <button type="submit">Update Clocks</button>
+</form>
+
+<br>
+
+{% for city, time in times.items() %}
+    <div class="clock-box">
+        <h2>{{ city }}</h2>
+        <p>{{ time }}</p>
+    </div>
+{% endfor %}
+
+<p style="text-align:center;"><a href="/">Back to Local Time</a></p>
+{% endblock %}
+</body>
+</html>
